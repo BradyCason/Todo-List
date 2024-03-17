@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="index.js" defer></script>
+</head>
+<body>
+    <dialog class="project-dialog">
+        <h2>Project</h2>
+        <form action="" class="project-dialog-form">
+            <div class="project-dialog-input-div">
+                <label for="project-name-input">Title</label>
+                <input type="text" name="project" class="project-name-input" id="project-name-input">
+            </div> 
+            <input type="submit" class="project-submit-button" value="Add Project">
+        </form>
+    </dialog>
+
+    <dialog class="item-dialog">
+        <h2>Project</h2>
+        <form action="" class="item-dialog-form">
+            <div class="item-dialog-input-div">
+                <label for="item-name-input">Title</label>
+                <input type="text" name="item" class="item-name-input" id="item-name-input">
+            </div> 
+            <input type="submit" class="item-submit-button" value="Add Item">
+        </form>
+    </dialog>
+
+    <div class="grid-container">
+        <div class="left-side-bar">
+            <div class="projects-title">
+                <h1>Projects</h1>
+                <img src="images/plus.svg" class="project-plus-button">
+            </div>
+            <div class="projects">
+            </div>
+        </div>
+        <div class="top-bar">
+            <h1 class="title">To-Do List</h1>
+        </div>
+        <div class="project" id="project">
+            <div class="project-title-div" id="project-title-div">
+                <h2 class="project-name">Project Name</h2>
+                <img src="images/plus.svg" class="item-plus-button">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
