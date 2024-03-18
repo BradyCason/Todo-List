@@ -21,7 +21,7 @@ class Item{
         this.displayProject();
 
         this.elements.itemContainer.addEventListener("click", (event) => {
-            if (this.isProject && event.target == this.elements.itemContainer){
+            if (this.isProject && (event.target == this.elements.sidecolor || event.target == this.elements.itemContainer || event.target == this.elements.editButton || event.target == this.elements.itemContents || event.target == this.elements.itemName)){
                 this.displayProject();
             }
         })
@@ -67,6 +67,14 @@ class Item{
         })
 
         this.elements.editButton.addEventListener("click", () => {
+            if (this.isProject){
+                document.querySelector(".project-dialog-title").textContent = "Project"
+                document.querySelector(".project-submit-button").value = "Edit Project"
+            }
+            else{
+                document.querySelector(".project-dialog-title").textContent = "Task"
+                document.querySelector(".project-submit-button").value = "Edit Task"
+            }
             this.projectDialogBox.projectNameInput.value = this.name;
             this.projectDialogBox.setCurrentItem(this)
             this.projectDialogBox.dialogBox.showModal();

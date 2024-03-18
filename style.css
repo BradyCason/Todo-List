@@ -1,6 +1,6 @@
 body{
     margin: 0px;
-    background-color: #C5EBAA;
+    background-color: #EEF0F2;
     font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
@@ -15,7 +15,7 @@ p, h2, h1{
 }
 
 .left-side-bar{
-    background-color: #A5DD9B;
+    background-color: #EEC643;
     grid-column-start: 1;
     grid-column-end: 25;
     grid-row-start: 10;
@@ -52,7 +52,8 @@ p, h2, h1{
 }
 
 .top-bar{
-    background-color: #F2C18D;
+    color: #EEF0F2;
+    background-color: #141414;
     grid-column-start: 1;
     grid-column-end: 101;
     grid-row-start: 1;
@@ -77,16 +78,25 @@ p, h2, h1{
     margin: 20px;
 }
 
+.projects .item-container:hover{
+    background-color: #0b196a;
+}
 
-.sidecolor {
+.project .item-container .sidecolor {
     height: 100%;
     width: 10px;
-    background-color: #F2C18D;
+    background-color: #011638;
+}
+
+.projects .item-container .sidecolor{
+    height: 100%;
+    width: 10px;
+    background-color: #011638;
 }
 
 .item-container{
+    color: #EEF0F2;
     border-radius: 0.5em;
-    background-color: #F6F193;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -95,6 +105,14 @@ p, h2, h1{
     height: 50px;
     margin: 0px;
     margin-top: 10px;
+}
+
+.projects .item-container{
+    background-color: #0D21A1;
+}
+
+.project .item-container{
+    background-color: #0D21A1;
 }
 
 .item-contents{
@@ -114,11 +132,15 @@ p, h2, h1{
     gap: 10px;
 }
 
-.trash-button,
-.edit-button,
 .item-plus-button,
 .project-plus-button{
     height: 70%;
+}
+
+.trash-button,
+.edit-button{
+    height: 70%;
+    -webkit-filter: invert(80%);
 }
 
 .trash-button:hover,
@@ -129,8 +151,22 @@ p, h2, h1{
 .item-plus-button:focus,
 .project-plus-button:hover,
 .project-plus-button:focus {
-  -webkit-filter: invert(30%);
+  
   transform: translateY(-0.25em);
+}
+
+.trash-button:hover,
+.trash-button:focus,
+.edit-button:hover,
+.edit-button:focus{
+    -webkit-filter: invert(40%);
+}
+
+.item-plus-button:hover,
+.item-plus-button:focus,
+.project-plus-button:hover,
+.project-plus-button:focus{
+    -webkit-filter: invert(40%);
 }
 
 .item-name {
@@ -165,7 +201,7 @@ p, h2, h1{
 
 .project-submit-button, .item-submit-button{
     align-self: center;
-    background-color: #10ae67;
+    background-color: #0D21A1;
     color: #fff;
     padding: 0.7em 2em;
     border-radius: 10px;

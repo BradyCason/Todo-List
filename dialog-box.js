@@ -23,7 +23,7 @@ class DialogBox{
                 this.currentItem.setName(this.projectNameInput.value);
             }
             else{
-                let newItem = new Item(projectNameInput.value, displayArea, this.projectDialogBox);
+                let newItem = new Item(this.projectNameInput.value, displayArea, this.projectDialogBox);
                 if(newItem.isProject){
                     this.projectsList.push(newItem);
                     this.activeProject = this.projectsList.indexOf(newItem);

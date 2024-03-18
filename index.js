@@ -6,11 +6,15 @@ let itemDialogBox = new DialogBox("item", ".project", projectDialogBox);
 
 let projectPlusButton = document.querySelector(".project-plus-button")
 projectPlusButton.addEventListener("click", () => {
+    document.querySelector(".project-dialog-title").textContent = "Project"
+    document.querySelector(".project-submit-button").value = "Add Project"
     projectDialogBox.dialogBox.showModal();
 })
 
 let itemPlusButton = document.querySelector(".item-plus-button")
 itemPlusButton.addEventListener("click", () => {
+    document.querySelector(".item-dialog-title").textContent = "Task"
+    document.querySelector(".item-submit-button").value = "Add Task"
     itemDialogBox.dialogBox.showModal();
 })
 
